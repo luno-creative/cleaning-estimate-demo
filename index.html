@@ -1,399 +1,78 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>お掃除サービス｜無料お見積もり</title>
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ハウスクリーニングの料金目安をその場で確認。清掃メニュー・部屋の広さ・追加オプションを選ぶだけで概算費用を自動計算できるLUNO CREATIVEのデモです。">
+<meta name="theme-color" content="#101b2a">
+<title>ハウスクリーニング かんたん見積もり｜LUNO CREATIVE DEMO</title>
 <style>
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  font-family: "Noto Sans JP", sans-serif;
-  background: #f4f7f5;
-  color: #24352b;
-}
-
-header {
-  padding: 24px 20px;
-  background: #fff;
-  border-bottom: 1px solid #e7eee9;
-}
-
-.header-inner {
-  max-width: 1050px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 19px;
-  font-weight: bold;
-  color: #198754;
-}
-
-.hero {
-  padding: 50px 20px;
-  text-align: center;
-  background: #e8f4eb;
-}
-
-.hero h1 {
-  font-size: clamp(25px, 5vw, 36px);
-  margin: 0 0 12px;
-}
-
-.hero p {
-  color: #65776b;
-  margin: 0;
-}
-
-main {
-  max-width: 850px;
-  margin: 35px auto;
-  padding: 0 16px;
-}
-
-.panel {
-  background: white;
-  border-radius: 16px;
-  padding: 28px;
-  box-shadow: 0 5px 25px #00000008;
-}
-
-h2 {
-  font-size: 21px;
-  margin-top: 0;
-}
-
-.field { margin-top: 24px; }
-
-.field > label,
-.field-title {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-select {
-  width: 100%;
-  padding: 14px;
-  border: 1px solid #dce5df;
-  border-radius: 9px;
-  font-size: 16px;
-  background: white;
-}
-
-.option {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 0;
-  border-bottom: 1px solid #edf1ee;
-}
-
-.option label {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  cursor: pointer;
-}
-
-.option input {
-  width: 19px;
-  height: 19px;
-  accent-color: #198754;
-}
-
-.price {
-  color: #198754;
-  font-weight: bold;
-}
-
-.result {
-  margin-top: 28px;
-  padding: 24px;
-  border-radius: 13px;
-  background: #edf7f0;
-}
-
-.result-title {
-  font-size: 14px;
-  color: #65776b;
-}
-
-.total {
-  font-size: clamp(30px, 6vw, 38px);
-  color: #198754;
-  font-weight: bold;
-  margin: 8px 0 18px;
-}
-
-.line {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 8px 0;
-  font-size: 14px;
-  border-top: 1px solid #dceade;
-}
-
-.buttons {
-  display: flex;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-button {
-  flex: 1;
-  padding: 15px 10px;
-  border: 0;
-  border-radius: 9px;
-  font-size: 15px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.primary {
-  background: #198754;
-  color: white;
-}
-
-.secondary {
-  background: #eaf0ec;
-  color: #405348;
-}
-
-button:hover { opacity: .85; }
-
-.note {
-  font-size: 12px;
-  color: #7d8a81;
-  line-height: 1.8;
-  margin-top: 20px;
-}
-
-footer {
-  text-align: center;
-  padding: 30px 15px;
-  color: #829087;
-  font-size: 12px;
-}
-
-@media (max-width: 500px) {
-  .panel { padding: 20px; }
-  .buttons { flex-direction: column; }
-}
+:root{--ink:#172536;--navy:#101b2a;--muted:#65717e;--line:#e5e8e8;--paper:#fff;--bg:#f4f6f5;--accent:#a8d889;--accent2:#edf6e7;--shadow:0 18px 50px rgba(18,34,49,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"Noto Sans JP","Yu Gothic",Meiryo,sans-serif;line-height:1.7}a{color:inherit}.wrap{width:min(1080px,calc(100% - 36px));margin:auto}
+header{background:var(--navy);color:#fff}.nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-size:18px;font-weight:900;letter-spacing:.12em;text-decoration:none}.brand span{color:var(--accent)}.nav small{color:#b8c4ce;font-size:11px;letter-spacing:.12em}
+.hero{background:linear-gradient(120deg,#101b2a,#1b3446);color:#fff;padding:68px 0 62px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:420px;height:420px;border:1px solid #ffffff18;border-radius:50%;right:-120px;top:-170px;box-shadow:0 0 0 50px #ffffff08,0 0 0 100px #ffffff05}.hero-inner{position:relative;z-index:1;max-width:760px}.eyebrow{color:var(--accent);font-size:11px;font-weight:900;letter-spacing:.2em}.hero h1{font-size:clamp(32px,5vw,54px);line-height:1.25;letter-spacing:-.04em;margin:14px 0}.hero p{color:#c9d3dc;max-width:640px;margin:0}.demo-stamp{display:inline-flex;align-items:center;gap:8px;border:1px solid #ffffff55;border-radius:99px;padding:7px 12px;color:#eaf3df;font-size:11px;margin-top:24px}
+main{padding:44px 0 80px}.layout{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:start}.panel{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:26px;box-shadow:var(--shadow)}.panel h2{font-size:22px;margin:0 0 5px}.sub{font-size:13px;color:var(--muted);margin:0 0 22px}.field{padding:17px 0;border-top:1px solid var(--line)}.field:first-of-type{border-top:0}.field label,.field-title{display:block;font-weight:800;font-size:14px;margin-bottom:9px}.hint{display:block;font-size:11px;color:var(--muted);font-weight:400;margin-top:3px}.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.choice{position:relative}.choice input{position:absolute;opacity:0;pointer-events:none}.choice span{display:flex;min-height:48px;align-items:center;justify-content:center;text-align:center;padding:9px 10px;border:1px solid #dfe4e3;border-radius:8px;background:#fff;font-size:13px;cursor:pointer;transition:.15s}.choice input:checked+span{border-color:#739d39;background:var(--accent2);box-shadow:inset 0 0 0 1px #739d39;color:#385b1b;font-weight:800}.choice input:focus-visible+span{outline:3px solid var(--accent)}.select{width:100%;border:1px solid #dfe4e3;border-radius:8px;padding:12px 13px;font:inherit;font-size:14px;background:#fff;color:var(--ink)}.checks{display:grid;grid-template-columns:1fr 1fr;gap:10px}.check{display:flex;align-items:flex-start;gap:9px;font-size:13px;color:#3e4b58}.check input{accent-color:#6f9637;margin-top:4px;width:16px;height:16px}
+.result{position:sticky;top:20px;background:var(--navy);color:#fff;border-radius:14px;padding:27px;box-shadow:var(--shadow)}.result .mini{font-size:11px;color:var(--accent);font-weight:900;letter-spacing:.16em}.result h2{font-size:21px;margin:8px 0 16px}.result-line{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid #ffffff20;color:#d2dbe2;font-size:13px}.total-label{font-size:12px;color:#c5d0d8;margin-top:22px}.total{font-size:clamp(30px,4vw,40px);font-weight:900;letter-spacing:-.04em;color:var(--accent);line-height:1.25;margin:5px 0}.range-note{font-size:11px;color:#aebbc5}.result button{width:100%;border:0;border-radius:8px;background:var(--accent);color:var(--navy);font-weight:900;padding:14px;margin-top:22px;font-size:14px;cursor:pointer}.result button:hover{filter:brightness(1.05)}.notice{font-size:11px;color:#aebbc5;line-height:1.65;margin:13px 0 0}.below{margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.info{background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px}.info b{display:block;font-size:13px;margin-bottom:5px}.info p{font-size:12px;color:var(--muted);margin:0}.footer{background:#0b1420;color:#aeb9c4;padding:25px 0;font-size:11px}.footer .wrap{display:flex;justify-content:space-between;gap:14px;align-items:center}.footer a{color:#dce5eb;text-decoration:none}.toast{display:none;background:#edf6df;color:#385b1b;border-radius:7px;padding:9px 12px;font-size:12px;margin-top:12px}
+@media(max-width:800px){.layout{grid-template-columns:1fr}.result{position:static}.below{grid-template-columns:1fr}.hero{padding:52px 0}.panel{padding:20px}}
+@media(max-width:460px){.wrap{width:calc(100% - 26px)}.nav{height:60px}.nav small{font-size:9px}.choices{grid-template-columns:1fr 1fr}.checks{grid-template-columns:1fr}.panel{padding:17px}}
 </style>
 </head>
-
 <body>
-
-<header>
-  <div class="header-inner">
-    <div class="logo">GREEN CLEANING</div>
-    <span>無料お見積もり</span>
-  </div>
-</header>
-
-<section class="hero">
-  <h1>お掃除のお見積もり</h1>
-  <p>ご希望の条件を選ぶだけで料金を自動計算します。</p>
+<header><div class="wrap nav"><a class="brand" href="https://luno-creative.github.io/">LUNO<span>.</span> CREATIVE</a><small>INDUSTRY DEMO / HOUSE CLEANING</small></div></header>
+<section class="hero"><div class="wrap hero-inner"><div class="eyebrow">SMART ESTIMATE / HOUSE CLEANING</div><h1>お掃除の内容に合わせて、<br>料金の目安をチェック。</h1><p>清掃メニュー・お部屋の広さ・追加オプションを選ぶだけ。ハウスクリーニング事業者向けの料金シミュレーションデモです。</p><div class="demo-stamp">● 操作できるサンプルデモ　/　架空の事業者設定</div></div></section>
+<main class="wrap">
+<div class="layout">
+<section class="panel"><h2>かんたん料金シミュレーション</h2><p class="sub">条件を選択すると、右側の概算金額が自動で更新されます。</p>
+<div class="field"><span class="field-title">清掃メニュー</span><div class="choices">
+<label class="choice"><input type="radio" name="menu" value="12000" data-label="エアコンクリーニング" checked><span>エアコンクリーニング</span></label>
+<label class="choice"><input type="radio" name="menu" value="16000" data-label="キッチン清掃"><span>キッチン清掃</span></label>
+<label class="choice"><input type="radio" name="menu" value="14000" data-label="浴室清掃"><span>浴室清掃</span></label>
+<label class="choice"><input type="radio" name="menu" value="9000" data-label="トイレ・洗面所清掃"><span>トイレ・洗面所清掃</span></label>
+<label class="choice"><input type="radio" name="menu" value="28000" data-label="水回りセット"><span>水回りセット</span></label>
+<label class="choice"><input type="radio" name="menu" value="35000" data-label="空室全体清掃"><span>空室全体清掃</span></label>
+</div></div>
+<div class="field"><label for="size">お部屋の広さ<span class="hint">空室全体清掃などの料金に反映される想定です</span></label><select class="select" id="size"><option value="0">〜20㎡</option><option value="5000">21〜40㎡</option><option value="10000">41〜60㎡</option><option value="18000">61〜80㎡</option><option value="28000">81㎡以上</option></select></div>
+<div class="field"><label for="condition">汚れの状態</label><select class="select" id="condition"><option value="0">通常の汚れ</option><option value="3000">汚れがやや強い</option><option value="7000">頑固な汚れ・カビあり</option></select></div>
+<div class="field"><span class="field-title">追加オプション</span><div class="checks">
+<label class="check"><input type="checkbox" name="opt" value="5000" data-label="換気扇・レンジフード">換気扇・レンジフード</label>
+<label class="check"><input type="checkbox" name="opt" value="4000" data-label="浴室エプロン内部">浴室エプロン内部</label>
+<label class="check"><input type="checkbox" name="opt" value="3000" data-label="窓・サッシ清掃">窓・サッシ清掃</label>
+<label class="check"><input type="checkbox" name="opt" value="2500" data-label="防カビコート">防カビコート</label>
+<label class="check"><input type="checkbox" name="opt" value="3500" data-label="床ワックス">床ワックス</label>
+<label class="check"><input type="checkbox" name="opt" value="5000" data-label="除菌・消臭">除菌・消臭</label>
+</div></div>
+<div class="field"><label for="timing">希望する清掃時期</label><select class="select" id="timing"><option>時期は未定</option><option>1週間以内</option><option>2週間以内</option><option>1か月以内</option><option>日程を相談したい</option></select></div>
 </section>
-
-<main>
-  <div class="panel">
-
-    <h2>サービス内容を選択</h2>
-
-    <div class="field">
-      <label for="rooms">お部屋の数</label>
-      <select id="rooms">
-        <option value="1">1部屋</option>
-        <option value="2">2部屋</option>
-        <option value="3">3部屋</option>
-        <option value="4">4部屋</option>
-      </select>
-    </div>
-
-    <div class="field">
-      <label for="area">お部屋の広さ</label>
-      <select id="area">
-        <option value="0">30㎡未満</option>
-        <option value="3000">30〜50㎡</option>
-        <option value="6000">50〜80㎡</option>
-        <option value="10000">80㎡以上</option>
-      </select>
-    </div>
-
-    <div class="field">
-      <div class="field-title">追加オプション</div>
-
-      <div class="option">
-        <label>
-          <input type="checkbox" class="option-input"
-                 value="3000" data-name="キッチン清掃">
-          キッチン清掃
-        </label>
-        <span class="price">3,000円</span>
-      </div>
-
-      <div class="option">
-        <label>
-          <input type="checkbox" class="option-input"
-                 value="4000" data-name="浴室清掃">
-          浴室清掃
-        </label>
-        <span class="price">4,000円</span>
-      </div>
-
-      <div class="option">
-        <label>
-          <input type="checkbox" class="option-input"
-                 value="2000" data-name="窓清掃">
-          窓清掃
-        </label>
-        <span class="price">2,000円</span>
-      </div>
-    </div>
-
-    <div class="result">
-      <div class="result-title">概算お見積もり（税込）</div>
-      <div class="total" id="total">8,000円</div>
-
-      <div class="line">
-        <span>基本料金</span>
-        <span id="basePrice">8,000円</span>
-      </div>
-
-      <div class="line">
-        <span>部屋数追加</span>
-        <span id="roomPrice">0円</span>
-      </div>
-
-      <div class="line">
-        <span>広さ追加</span>
-        <span id="areaPrice">0円</span>
-      </div>
-
-      <div class="line">
-        <span>オプション</span>
-        <span id="optionPrice">0円</span>
-      </div>
-    </div>
-
-    <div class="buttons">
-      <button class="primary" id="copyBtn">
-        見積もりをコピー
-      </button>
-      <button class="secondary" id="resetBtn">
-        リセット
-      </button>
-    </div>
-
-    <p class="note">
-      ※こちらはポートフォリオ用のデモです。
-      実際の料金・サービス内容とは異なります。
-      正式な金額は事業者への確認が必要です。
-    </p>
-
-  </div>
+<aside class="result" aria-live="polite"><div class="mini">YOUR ESTIMATE</div><h2>お見積もり目安</h2><div id="breakdown"></div><div class="total-label">概算合計（税込・サンプル価格）</div><div class="total" id="total">¥0</div><div class="range-note" id="rangeNote">選択内容に応じた目安です</div><button type="button" id="copyBtn">見積もり内容をコピー</button><div class="toast" id="toast" role="status">見積もり内容をコピーしました。</div><p class="notice">※このページはLUNO CREATIVEの制作デモです。表示金額・サービス条件は説明用の仮設定であり、実在する事業者の価格ではありません。汚れの状態・設備の種類・作業範囲などにより正式な料金は変動します。</p></aside>
+</div>
+<div class="below">
+<article class="info"><b>メニューごとの料金を確認</b><p>エアコン・水回り・空室清掃など、希望するサービスの概算をすぐに確認できます。</p></article>
+<article class="info"><b>追加作業もまとめて試算</b><p>換気扇や防カビなどのオプションを選び、料金の内訳を見える化します。</p></article>
+<article class="info"><b>問い合わせ前の不安を軽減</b><p>事前に費用感を把握できるため、相談・問い合わせにつながりやすくなります。</p></article>
+</div>
 </main>
-
-<footer>
-  GREEN CLEANING | Portfolio Demo
-</footer>
-
+<footer class="footer"><div class="wrap"><span>© 2026 LUNO CREATIVE / DEMO PROJECT</span><a href="https://luno-creative.github.io/">Web制作のご相談はこちら ↗</a></div></footer>
 <script>
-const rooms = document.getElementById("rooms");
-const area = document.getElementById("area");
-const options = document.querySelectorAll(".option-input");
-
-const yen = value => Number(value).toLocaleString("ja-JP") + "円";
-
-function calculate() {
-  const base = 8000;
-  const room = (Number(rooms.value) - 1) * 2000;
-  const areaValue = Number(area.value);
-
-  let option = 0;
-
-  options.forEach(item => {
-    if (item.checked) {
-      option += Number(item.value);
-    }
-  });
-
-  const total = base + room + areaValue + option;
-
-  document.getElementById("total").textContent = yen(total);
-  document.getElementById("basePrice").textContent = yen(base);
-  document.getElementById("roomPrice").textContent = yen(room);
-  document.getElementById("areaPrice").textContent = yen(areaValue);
-  document.getElementById("optionPrice").textContent = yen(option);
-
-  return {
-    base, room, area: areaValue, option, total
-  };
+const yen=n=>'¥'+Math.round(n).toLocaleString('ja-JP');
+function calc(){
+ const menuInput=document.querySelector('[name=menu]:checked');
+ const menu=+menuInput.value, size=+document.querySelector('#size').value, condition=+document.querySelector('#condition').value;
+ const opts=[...document.querySelectorAll('[name=opt]:checked')];
+ const lines=[['メニュー：'+menuInput.dataset.label,menu],['広さ加算',size],['汚れ状態による加算',condition]];
+ opts.forEach(o=>lines.push([o.dataset.label,+o.value]));
+ const total=lines.reduce((s,x)=>s+x[1],0);
+ document.querySelector('#breakdown').innerHTML=lines.map(x=>'<div class="result-line"><span>'+x[0]+'</span><b>'+yen(x[1])+'</b></div>').join('');
+ document.querySelector('#total').textContent=yen(total);
+ document.querySelector('#rangeNote').textContent='概算目安：'+yen(total*.9)+'〜'+yen(total*1.1)+'（設備・汚れ・作業範囲で変動）';
+ window.currentEstimate='ハウスクリーニング / '+lines.map(x=>x[0]+': '+yen(x[1])).join(' / ')+' / 希望時期: '+document.querySelector('#timing').value+' / 合計目安 '+yen(total);
 }
-
-function copyEstimate() {
-  const data = calculate();
-
-  const text = [
-    "GREEN CLEANING 概算見積もり",
-    "部屋数：" + rooms.value + "部屋",
-    "広さ：" + area.options[area.selectedIndex].text,
-    "基本料金：" + yen(data.base),
-    "部屋数追加：" + yen(data.room),
-    "広さ追加：" + yen(data.area),
-    "オプション：" + yen(data.option),
-    "合計：" + yen(data.total),
-    "※デモ用の見積もりです。"
-  ].join("\n");
-
-  if (navigator.clipboard && window.isSecureContext) {
-    navigator.clipboard.writeText(text)
-      .then(() => alert("見積もりをコピーしました"))
-      .catch(() => alert("コピーできませんでした"));
-  } else {
-    const area = document.createElement("textarea");
-    area.value = text;
-    document.body.appendChild(area);
-    area.select();
-    try {
-      document.execCommand("copy");
-      alert("見積もりをコピーしました");
-    } catch {
-      alert("コピーできませんでした");
-    }
-    area.remove();
-  }
-}
-
-function reset() {
-  rooms.value = "1";
-  area.value = "0";
-  options.forEach(item => item.checked = false);
-  calculate();
-}
-
-rooms.addEventListener("change", calculate);
-area.addEventListener("change", calculate);
-options.forEach(item => item.addEventListener("change", calculate));
-
-document.getElementById("copyBtn")
-  .addEventListener("click", copyEstimate);
-
-document.getElementById("resetBtn")
-  .addEventListener("click", reset);
-
-calculate();
+document.querySelectorAll('input,select').forEach(x=>x.addEventListener('change',calc));
+document.querySelector('#copyBtn').addEventListener('click',async()=>{
+ try{await navigator.clipboard.writeText(window.currentEstimate);document.querySelector('#toast').textContent='見積もり内容をコピーしました。';}
+ catch(e){document.querySelector('#toast').textContent=window.currentEstimate;}
+ document.querySelector('#toast').style.display='block';
+});
+calc();
 </script>
-
 </body>
 </html>
