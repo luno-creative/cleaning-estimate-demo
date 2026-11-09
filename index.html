@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お掃除サービス｜無料お見積もり</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  background: #f4f7f5;
+  color: #24352b;
+}
+
+header {
+  padding: 24px 20px;
+  background: #fff;
+  border-bottom: 1px solid #e7eee9;
+}
+
+.header-inner {
+  max-width: 1050px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 19px;
+  font-weight: bold;
+  color: #198754;
+}
+
+.hero {
+  padding: 50px 20px;
+  text-align: center;
+  background: #e8f4eb;
+}
+
+.hero h1 {
+  font-size: clamp(25px, 5vw, 36px);
+  margin: 0 0 12px;
+}
+
+.hero p {
+  color: #65776b;
+  margin: 0;
+}
+
+main {
+  max-width: 850px;
+  margin: 35px auto;
+  padding: 0 16px;
+}
+
+.panel {
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 5px 25px #00000008;
+}
+
+h2 {
+  font-size: 21px;
+  margin-top: 0;
+}
+
+.field { margin-top: 24px; }
+
+.field > label,
+.field-title {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #dce5df;
+  border-radius: 9px;
+  font-size: 16px;
+  background: white;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #edf1ee;
+}
+
+.option label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.option input {
+  width: 19px;
+  height: 19px;
+  accent-color: #198754;
+}
+
+.price {
+  color: #198754;
+  font-weight: bold;
+}
+
+.result {
+  margin-top: 28px;
+  padding: 24px;
+  border-radius: 13px;
+  background: #edf7f0;
+}
+
+.result-title {
+  font-size: 14px;
+  color: #65776b;
+}
+
+.total {
+  font-size: clamp(30px, 6vw, 38px);
+  color: #198754;
+  font-weight: bold;
+  margin: 8px 0 18px;
+}
+
+.line {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  font-size: 14px;
+  border-top: 1px solid #dceade;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  flex: 1;
+  padding: 15px 10px;
+  border: 0;
+  border-radius: 9px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.primary {
+  background: #198754;
+  color: white;
+}
+
+.secondary {
+  background: #eaf0ec;
+  color: #405348;
+}
+
+button:hover { opacity: .85; }
+
+.note {
+  font-size: 12px;
+  color: #7d8a81;
+  line-height: 1.8;
+  margin-top: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 15px;
+  color: #829087;
+  font-size: 12px;
+}
+
+@media (max-width: 500px) {
+  .panel { padding: 20px; }
+  .buttons { flex-direction: column; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">GREEN CLEANING</div>
+    <span>無料お見積もり</span>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>お掃除のお見積もり</h1>
+  <p>ご希望の条件を選ぶだけで料金を自動計算します。</p>
+</section>
+
+<main>
+  <div class="panel">
+
+    <h2>サービス内容を選択</h2>
+
+    <div class="field">
+      <label for="rooms">お部屋の数</label>
+      <select id="rooms">
+        <option value="1">1部屋</option>
+        <option value="2">2部屋</option>
+        <option value="3">3部屋</option>
+        <option value="4">4部屋</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="area">お部屋の広さ</label>
+      <select id="area">
+        <option value="0">30㎡未満</option>
+        <option value="3000">30〜50㎡</option>
+        <option value="6000">50〜80㎡</option>
+        <option value="10000">80㎡以上</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <div class="field-title">追加オプション</div>
+
+      <div class="option">
+        <label>
+          <input type="checkbox" class="option-input"
+                 value="3000" data-name="キッチン清掃">
+          キッチン清掃
+        </label>
+        <span class="price">3,000円</span>
+      </div>
+
+      <div class="option">
+        <label>
+          <input type="checkbox" class="option-input"
+                 value="4000" data-name="浴室清掃">
+          浴室清掃
+        </label>
+        <span class="price">4,000円</span>
+      </div>
+
+      <div class="option">
+        <label>
+          <input type="checkbox" class="option-input"
+                 value="2000" data-name="窓清掃">
+          窓清掃
+        </label>
+        <span class="price">2,000円</span>
+      </div>
+    </div>
+
+    <div class="result">
+      <div class="result-title">概算お見積もり（税込）</div>
+      <div class="total" id="total">8,000円</div>
+
+      <div class="line">
+        <span>基本料金</span>
+        <span id="basePrice">8,000円</span>
+      </div>
+
+      <div class="line">
+        <span>部屋数追加</span>
+        <span id="roomPrice">0円</span>
+      </div>
+
+      <div class="line">
+        <span>広さ追加</span>
+        <span id="areaPrice">0円</span>
+      </div>
+
+      <div class="line">
+        <span>オプション</span>
+        <span id="optionPrice">0円</span>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button class="primary" id="copyBtn">
+        見積もりをコピー
+      </button>
+      <button class="secondary" id="resetBtn">
+        リセット
+      </button>
+    </div>
+
+    <p class="note">
+      ※こちらはポートフォリオ用のデモです。
+      実際の料金・サービス内容とは異なります。
+      正式な金額は事業者への確認が必要です。
+    </p>
+
+  </div>
+</main>
+
+<footer>
+  GREEN CLEANING | Portfolio Demo
+</footer>
+
+<script>
+const rooms = document.getElementById("rooms");
+const area = document.getElementById("area");
+const options = document.querySelectorAll(".option-input");
+
+const yen = value => Number(value).toLocaleString("ja-JP") + "円";
+
+function calculate() {
+  const base = 8000;
+  const room = (Number(rooms.value) - 1) * 2000;
+  const areaValue = Number(area.value);
+
+  let option = 0;
+
+  options.forEach(item => {
+    if (item.checked) {
+      option += Number(item.value);
+    }
+  });
+
+  const total = base + room + areaValue + option;
+
+  document.getElementById("total").textContent = yen(total);
+  document.getElementById("basePrice").textContent = yen(base);
+  document.getElementById("roomPrice").textContent = yen(room);
+  document.getElementById("areaPrice").textContent = yen(areaValue);
+  document.getElementById("optionPrice").textContent = yen(option);
+
+  return {
+    base, room, area: areaValue, option, total
+  };
+}
+
+function copyEstimate() {
+  const data = calculate();
+
+  const text = [
+    "GREEN CLEANING 概算見積もり",
+    "部屋数：" + rooms.value + "部屋",
+    "広さ：" + area.options[area.selectedIndex].text,
+    "基本料金：" + yen(data.base),
+    "部屋数追加：" + yen(data.room),
+    "広さ追加：" + yen(data.area),
+    "オプション：" + yen(data.option),
+    "合計：" + yen(data.total),
+    "※デモ用の見積もりです。"
+  ].join("\n");
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text)
+      .then(() => alert("見積もりをコピーしました"))
+      .catch(() => alert("コピーできませんでした"));
+  } else {
+    const area = document.createElement("textarea");
+    area.value = text;
+    document.body.appendChild(area);
+    area.select();
+    try {
+      document.execCommand("copy");
+      alert("見積もりをコピーしました");
+    } catch {
+      alert("コピーできませんでした");
+    }
+    area.remove();
+  }
+}
+
+function reset() {
+  rooms.value = "1";
+  area.value = "0";
+  options.forEach(item => item.checked = false);
+  calculate();
+}
+
+rooms.addEventListener("change", calculate);
+area.addEventListener("change", calculate);
+options.forEach(item => item.addEventListener("change", calculate));
+
+document.getElementById("copyBtn")
+  .addEventListener("click", copyEstimate);
+
+document.getElementById("resetBtn")
+  .addEventListener("click", reset);
+
+calculate();
+</script>
+
+</body>
+</html>
